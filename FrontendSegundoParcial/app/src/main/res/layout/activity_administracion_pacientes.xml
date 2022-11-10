@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdministracionPacientesActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3">
+
+        <RadioButton
+            android:id="@+id/rbNombre"
+            android:text="Nombre"/>
+
+        <RadioButton
+            android:id="@+id/rbApellido"
+            android:text="Apellido"/>
+
+        <CheckBox
+            android:id="@+id/cbFisio"
+            android:text="Fisioterapeuta"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svSearch"
+            android:inputType="text"
+            app:queryHint="Nombre"
+            android:layout_gravity="center"
+            android:layout_width="160dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svSearch2"
+            android:inputType="text"
+            app:queryHint="Apellido"
+            android:layout_gravity="center"
+            android:layout_columnSpan="1"
+            android:layout_margin="10dp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svSearch3"
+            android:inputType="text"
+            app:queryHint="Cadena"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svSearch4"
+            android:inputType="text"
+            app:queryHint="Cantidad"
+            android:layout_gravity="center"
+            android:layout_columnSpan="1"
+            android:layout_margin="10dp"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"/>
+
+        <Button
+            android:id="@+id/btnFilter"
+            android:layout_width="160dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:text="Fitrar" />
+
+        <Button
+            android:id="@+id/btnNew"
+            android:layout_width="160dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:text="Nuevo" />
+
+    </GridLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
