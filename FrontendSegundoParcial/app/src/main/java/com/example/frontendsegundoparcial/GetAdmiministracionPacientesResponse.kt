@@ -38,5 +38,6 @@ data class Lista (
     @SerializedName("incluirLimiteDeCredito") val incluirLimiteDeCredito: String? = null,
     @SerializedName("deuda") val deuda: String? = null,
     @SerializedName("saldo") val saldo: String? = null,
-    @SerializedName("creditos") val creditos: String? = null
+    @SerializedName("creditos") val creditos: String? = null,
+    @SerializedName("fecha") val fecha: String? = null
 )

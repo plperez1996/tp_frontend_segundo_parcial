@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_fisio_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/fisioterapeuta"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_fisio_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_fisio_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        android:text="probando Fisio"/>
+
+    <TextView
+        android:id="@+id/tv_paciente_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_fisio_title"
+        android:text="@string/paciente"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:id="@+id/tv_paciente_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_paciente_title"
+        app:layout_constraintStart_toStartOf="@id/tv_paciente_title"
+        android:text="probando paciente"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/tv_fecha_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_paciente_title"
+        android:text="@string/fecha"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginStart="70dp"/>
+
+    <TextView
+        android:id="@+id/tv_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_fecha_title"
+        app:layout_constraintStart_toStartOf="@id/tv_fecha_title"
+        android:text="2022-11-09"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/et_observacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_fisio_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:hint="@string/observacion"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/btn_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_observacion"
+        android:layout_marginStart="5dp"
+        android:text="@string/guardar"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_guardar"
+        android:layout_marginEnd="5dp"
+        android:text="@string/cancelar"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

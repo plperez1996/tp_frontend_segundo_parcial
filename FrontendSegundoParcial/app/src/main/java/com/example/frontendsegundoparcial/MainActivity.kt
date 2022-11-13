@@ -23,12 +23,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val btnAdmPac = findViewById<Button>(R.id.btnAdmPac)
+        val btnResTurno = findViewById<Button>(R.id.btnResTurn)
 
         btnAdmPac.setOnClickListener {
             val intent = Intent(this, AdministracionPacientesActivity::class.java)
             startActivity(intent)
         }
 
+        btnResTurno.setOnClickListener{
+            val intent = Intent(this, ReservaTurnosActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }
