@@ -63,7 +63,7 @@
         android:hint="@string/fecha_desde"
         android:importantForAutofill="no"
         android:inputType="text"
-        android:visibility="gone"/>
+        android:visibility="invisible"/>
 
     <EditText
         android:id="@+id/et_fecha_hasta"
@@ -75,7 +75,7 @@
         android:inputType="text"
         android:importantForAutofill="no"
         android:hint="@string/fecha_hasta"
-        android:visibility="gone"/>
+        android:visibility="invisible"/>
 
     <Button
         android:id="@+id/btn_buscar"
@@ -85,7 +85,16 @@
         app:layout_constraintTop_toBottomOf="@id/rg_filtrado"
         android:layout_marginEnd="20dp"
         android:text="@string/buscar"
-        android:visibility="gone"/>
+        android:visibility="invisible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_reserva"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_buscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

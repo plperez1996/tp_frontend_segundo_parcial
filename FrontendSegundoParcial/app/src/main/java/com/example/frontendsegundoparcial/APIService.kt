@@ -11,4 +11,10 @@ interface APIService {
     @GET
     @Headers("Content-Type: application/json")
     suspend fun getAdministracionDePacientes(@Url url: String): Response<GetAdmiministracionPacientesResponse?>?
+
+
+    @GET
+    @Headers("Content-Type: application/json")
+    suspend fun getReservas(@Url url: String): Response<List<Reservas>?>?
+
 }
