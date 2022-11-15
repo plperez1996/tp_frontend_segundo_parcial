@@ -39,5 +39,7 @@ data class Lista (
     @SerializedName("deuda") val deuda: String? = null,
     @SerializedName("saldo") val saldo: String? = null,
     @SerializedName("creditos") val creditos: String? = null,
-    @SerializedName("fecha") val fecha: String? = null
+    @SerializedName("fecha") val fecha: String? = null,
+    @SerializedName("idCliente") val idCliente: idCliente? = null,
+    @SerializedName("idEmpleado") val idEmplea: idEmpleado? = null
 )

@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName
 import java.util.*
 import kotlin.collections.HashMap
 
+data class ReservaTurnosResponse(@SerializedName("lista") val lista: List<Reservas>)
 
 data class Reservas(
     @SerializedName("idReserva") var idReserva: Int? = null,
@@ -17,9 +18,9 @@ data class Reservas(
 )
 
 data class idEmpleado(
-    @SerializedName("idPersona") var idEmplea: Int,
-    @SerializedName("nombre") var nombreEmpleado: String,
-    @SerializedName("apellido") var apellidoEmpleado: String
+    @SerializedName("idPersona") var idEmplea: Int? = null,
+    @SerializedName("nombre") var nombreEmpleado: String? = null,
+    @SerializedName("apellido") var apellidoEmpleado: String? = null
 )
 
 data class idCliente(

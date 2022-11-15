@@ -11,8 +11,8 @@ class ReservasViewHolder(view: View):RecyclerView.ViewHolder(view) {
     fun bind(reserva: Reservas){
 
         binding.tvFisioNombre.text = reserva.idEmplea!!.nombreEmpleado
-        binding.tvPacienteNombre.text = reserva.idCliente?.nombreCliente
-        binding.tvFecha.text = reserva.fechaReserva
+        binding.tvPacienteNombre.text = reserva.idCliente?.nombreCliente ?: ""
+        binding.tvFecha.text = reserva.fechaReserva ?: ""
 
     }
 }

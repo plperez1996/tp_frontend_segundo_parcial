@@ -13,10 +13,12 @@ import com.example.frontendsegundoparcial.databinding.ActivityReservaTurnosBindi
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.net.URLEncoder
 
 class ReservaTurnosActivity : AppCompatActivity() {
     private lateinit var rgOptions : RadioGroup
@@ -25,8 +27,10 @@ class ReservaTurnosActivity : AppCompatActivity() {
     private lateinit var btnBuscar : Button
     private lateinit var binding:ActivityReservaTurnosBinding
     private lateinit var adapter: ReservasAdapter
+    private lateinit var adapterClient: ListAdapter
     private lateinit var selectedOption : CharSequence
     private var reservas = mutableListOf<Reservas>()
+    private var reservasCliente = mutableListOf<Lista>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityReservaTurnosBinding.inflate(layoutInflater)
@@ -51,6 +55,13 @@ class ReservaTurnosActivity : AppCompatActivity() {
                 "Empleado" -> {
                     if(etFechaDesde.text != null && etFechaHasta != null){
                         getByFisioAndDate(etFechaDesde.text.toString(), etFechaHasta.text.toString())
+                    }else{
+                        Toast.makeText(this, "Los campos no pueden quedar vacios", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                "Cliente" -> {
+                    if (etFechaDesde.text != null){
+                        getByClientId(etFechaDesde.text.toString())
                     }else{
                         Toast.makeText(this, "Los campos no pueden quedar vacios", Toast.LENGTH_SHORT).show()
                     }
@@ -105,6 +116,31 @@ class ReservaTurnosActivity : AppCompatActivity() {
         Toast.makeText(this, "Ocurrio un error", Toast.LENGTH_SHORT).show()
     }
 
+    private fun getByClientId(cliendId: String){
+        CoroutineScope(Dispatchers.IO).launch {
+            val call = getRetrofit().create(APIService::class.java).getReservasByClientID("stock-nutrinatalia/reserva?ejemplo=" + withContext(
+                Dispatchers.IO
+            ){
+                URLEncoder.encode("{\"idCliente\":{\"idPersona\":$cliendId}}", "UTF-8")
+            })
+            val reservasCall = call?.body()
+            runOnUiThread {
+                if (call?.isSuccessful!!){
+                    val listaReservas = reservasCall
+                    val reservasCliente = mutableListOf<Reservas>()
+                    listaReservas!!.lista.forEach {
+                        reservasCliente.add(Reservas(idEmplea = idEmpleado(nombreEmpleado = it.nombre)))
+                    }
+                    reservas.clear()
+                    reservas.addAll(reservasCliente)
+                    initRecyclerView()
+                    adapter.notifyDataSetChanged()
+                }else{
+                    showError()
+                }
+            }
+        }
+    }
 
     private fun agregarCampos(opcion: CharSequence){
         when(opcion){
