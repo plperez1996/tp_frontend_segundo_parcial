@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".FichaClinica.FichaClinicaActivity"
+android:orientation="vertical">
 
-    <include layout="@layout/toolbar"/>
+<include
+    layout="@layout/toolbar"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -29,10 +29,10 @@
                 android:textSize="16sp"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-medium"
-                android:text="ADMINISTRACION DE PACIENTES"/>
+                android:text="CREAR FICHA"/>
 
             <Button
-                android:id="@+id/btnAdmPac"
+                android:id="@+id/btnCrear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="IR"/>
@@ -54,41 +54,15 @@
                 android:textSize="16sp"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-medium"
-                android:text="RESERVA DE TURNOS"/>
+                android:text="FILTRAR FICHAS CLINICAS"/>
 
             <Button
-                android:id="@+id/btnResTurn"
+                android:id="@+id/btnFiltrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="IR"/>
 
         </LinearLayout>
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="22dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="16sp"
-                android:fontFamily="sans-serif-medium"
-                android:text="FICHA CLINICA"/>
-
-            <Button
-                android:id="@+id/btnFichClin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="IR"/>
-
-
-        </LinearLayout>
-
     </LinearLayout>
+
 </LinearLayout>
