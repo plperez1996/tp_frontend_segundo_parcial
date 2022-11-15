@@ -31,18 +31,16 @@
                 android:value="" />
         </activity>
 
-
         <activity
-            android:name=".AdministracionPacientes.AdministracionPacientesActivity"
+            android:name=".FichaClinica.CrearFichaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
 
-
         <activity
-            android:name=".FichaClinica.CrearFichaActivity"
+            android:name=".AdministracionPacientes.AdministracionPacientesActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
