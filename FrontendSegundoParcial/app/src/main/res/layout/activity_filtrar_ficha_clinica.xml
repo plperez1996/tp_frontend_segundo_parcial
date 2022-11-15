@@ -51,6 +51,13 @@
                     android:layout_width="wrap_content"
                     android:text="Paciente"/>
 
+                <RadioButton
+                    android:id="@+id/rbFechas"
+                    android:checked="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Fecha"/>
+
             </RadioGroup>
 
             <GridLayout
@@ -95,7 +102,7 @@
         </GridLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvInfo"
+            android:id="@+id/rvFichas"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

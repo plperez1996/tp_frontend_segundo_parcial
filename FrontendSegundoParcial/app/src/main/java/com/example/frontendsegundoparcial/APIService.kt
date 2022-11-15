@@ -1,5 +1,6 @@
 package com.example.frontendsegundoparcial
 
+import com.example.frontendsegundoparcial.FichaClinica.GetFichasClinicaResponse
 import com.example.frontendsegundoparcial.FichaClinica.PostFichaClinica
 import retrofit2.Response
 import retrofit2.http.Body
@@ -22,8 +23,8 @@ interface APIService {
     @Headers("Content-Type: application/json", "usuario: usuario5")
     suspend fun postFichaClinica(@Url url: String, @Body body: PostFichaClinica) : Response<Void>
 
-    @POST
-    @Headers("Content-Type: application/json", "usuario: usuario5")
-    suspend fun getFichaClinica(@Url url: String) : Response<Void>
+    @GET
+    @Headers("Content-Type: application/json")
+    suspend fun getFichaClinica(@Url url: String) : Response<GetFichasClinicaResponse?>?
 
 }

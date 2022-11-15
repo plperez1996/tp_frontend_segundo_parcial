@@ -38,5 +38,42 @@ data class Lista (
     @SerializedName("incluirLimiteDeCredito") val incluirLimiteDeCredito: String? = null,
     @SerializedName("deuda") val deuda: String? = null,
     @SerializedName("saldo") val saldo: String? = null,
-    @SerializedName("creditos") val creditos: String? = null
+    @SerializedName("creditos") val creditos: String? = null,
+    @SerializedName("idEmpleado") val idEmpleado: idInfo? = null,
+    @SerializedName("idCliente") val idCliente: idInfo? = null
 ): java.io.Serializable
+
+
+data class idInfo (
+    val idPersona: Long,
+    val nombre: String,
+    val apellido: String? = null,
+    val email: String? = null,
+    val telefono: String? = null,
+    val seguroMedico: Any? = null,
+    val seguroMedicoNumero: Any? = null,
+    val ruc: String? = null,
+    val cedula: String? = null,
+    val tipoPersona: String? = null,
+    val usuarioLogin: String? = null,
+    val idLocalDefecto: String? = null,
+    val flagVendedor: String? = null,
+    val flagTaxfree: Any? = null,
+    val flagExcepcionChequeoVenta: String? = null,
+    val observacion: Any? = null,
+    val direccion: Any? = null,
+    val idCiudad: Any? = null,
+    val tipoCliente: String? = null,
+    val fechaHoraAprobContrato: Any? = null,
+    val soloUsuariosDelSistema: Any? = null,
+    val soloPersonasTaxfree: Any? = null,
+    val nombreCompleto: String,
+    val limiteCredito: Double,
+    val fechaNacimiento: String? = null,
+    val soloProximosCumpleanhos: Any? = null,
+    val todosLosCampos: Any? = null,
+    val incluirLimiteDeCredito: Any? = null,
+    val deuda: Any? = null,
+    val saldo: Any? = null,
+    val creditos: Any? = null
+)
