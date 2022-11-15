@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:columnCount="2"
+        android:rowCount="7"
+        tools:context=".AdministracionPacientes.CrearPersonaActivity">
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:inputType="text"
+            android:hint="Nombre"
+            android:layout_gravity="center"
+            android:layout_columnSpan="2"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            />
+
+
+        <EditText
+            android:id="@+id/etApellido"
+            android:inputType="text"
+            android:hint="Apellido"
+            android:layout_gravity="center"
+            android:layout_columnSpan="2"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:inputType="text"
+            android:hint="Email"
+            android:layout_gravity="center"
+            android:layout_columnSpan="2"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etTelefono"
+            android:inputType="number"
+            android:hint="Telefono"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etRuc"
+            android:inputType="text"
+            android:hint="RUC"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etFechNac"
+            android:inputType="text"
+            android:hint="Fecha de Nac."
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etCedula"
+            android:inputType="text"
+            android:hint="Cedula"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/cbSystemUser"
+            android:layout_columnSpan="2"
+            android:text="Usuario del Sistema"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNuevo"
+            android:layout_gravity="center"
+            android:layout_columnSpan="2"
+            android:text="Crear Persona"/>
+
+    </GridLayout>
+</LinearLayout>
