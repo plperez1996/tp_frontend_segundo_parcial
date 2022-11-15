@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
@@ -28,6 +29,7 @@ class ReservaTurnosActivity : AppCompatActivity() {
     private lateinit var binding:ActivityReservaTurnosBinding
     private lateinit var adapter: ReservasAdapter
     private lateinit var selectedOption : CharSequence
+    private lateinit var btnBack: ImageButton
     private var reservas = mutableListOf<Reservas>()
     private var reservasCliente = mutableListOf<Lista>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +41,12 @@ class ReservaTurnosActivity : AppCompatActivity() {
         etFechaDesde = findViewById(R.id.et_fecha_desde)
         etFechaHasta = findViewById(R.id.et_fecha_hasta)
         btnBuscar = findViewById(R.id.btn_buscar)
+        btnBack = findViewById(R.id.BtnBack)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
+
         getByFisioAndDate("2", "20190903")
         rgOptions.setOnCheckedChangeListener(
             RadioGroup.OnCheckedChangeListener{

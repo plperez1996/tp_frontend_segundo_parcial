@@ -26,7 +26,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textSize="24sp"
-            android:text="Holaaaaa"
+            android:text="@string/tp_front_end"
             android:textColor="@color/white"/>
     </LinearLayout>
 

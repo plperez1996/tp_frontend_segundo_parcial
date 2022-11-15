@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import com.example.frontendsegundoparcial.APIService
 import com.example.frontendsegundoparcial.GetRetrofit
@@ -22,6 +23,7 @@ class CrearFichaActivity : AppCompatActivity() {
     private lateinit var etIdCliente: EditText
     private lateinit var etIdTipoProducto: EditText
     private lateinit var btnRegistrarFicha: Button
+    private lateinit var btnBack: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +37,11 @@ class CrearFichaActivity : AppCompatActivity() {
         etIdCliente = findViewById(R.id.et_id_cliente)
         etIdTipoProducto = findViewById(R.id.et_id_producto)
         btnRegistrarFicha = findViewById(R.id.btn_registrar_ficha)
+        btnBack = findViewById(R.id.BtnBack)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         btnRegistrarFicha.setOnClickListener {
             postFichaClinica(etMotivo.text.toString(), etDiagnostico.text.toString(),

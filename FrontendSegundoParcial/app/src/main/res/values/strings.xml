@@ -20,4 +20,5 @@
     <string name="tratamiento">Tratamiento</string>
     <string name="diagnostico">Diagnostico</string>
     <string name="motivo_consulta">Motivo de la consulta</string>
+    <string name="tp_front_end">TP Front End Android Nativo</string>
 </resources>
