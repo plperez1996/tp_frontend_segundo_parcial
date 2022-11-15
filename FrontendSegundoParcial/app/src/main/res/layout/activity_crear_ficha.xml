@@ -17,9 +17,9 @@
         tools:context=".AdministracionPacientes.CrearPersonaActivity">
 
         <EditText
-            android:id="@+id/etNombre"
+            android:id="@+id/et_motivo"
             android:inputType="text"
-            android:hint="Motivo de la consulta"
+            android:hint="@string/motivo_consulta"
             android:layout_gravity="center"
             android:layout_columnSpan="2"
             android:layout_width="match_parent"
@@ -29,9 +29,9 @@
 
 
         <EditText
-            android:id="@+id/etApellido"
+            android:id="@+id/et_diagnostico"
             android:inputType="text"
-            android:hint="Diagnostico"
+            android:hint="@string/diagnostico"
             android:layout_gravity="center"
             android:layout_columnSpan="2"
             android:layout_width="match_parent"
@@ -39,69 +39,56 @@
             android:layout_height="wrap_content"/>
 
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/et_observacion"
             android:inputType="text"
-            android:hint="Tratamiento"
-            android:layout_gravity="center"
-            android:layout_columnSpan="2"
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/etTelefono"
-            android:inputType="number"
-            android:hint="Observiacion"
+            android:hint="@string/observacion"
             android:layout_gravity="fill"
             android:layout_columnSpan="2"
             android:layout_columnWeight="2"
             android:layout_width="wrap_content"
             android:layout_margin="10dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no" />
 
         <EditText
-            android:id="@+id/etRuc"
+            android:id="@+id/et_id_empleado"
             android:inputType="text"
-            android:hint="RUC"
+            android:hint="@string/id_empleado"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/et_id_cliente"
+            android:inputType="text"
+            android:hint="@string/id_cliente"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/et_id_producto"
+            android:inputType="text"
+            android:hint="@string/id_tipo_producto"
             android:layout_gravity="fill"
             android:layout_columnWeight="1"
             android:layout_width="wrap_content"
             android:layout_margin="10dp"
             android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/etFechNac"
-            android:inputType="text"
-            android:hint="Fecha de Nac."
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_width="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/etCedula"
-            android:inputType="text"
-            android:hint="Cedula"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"
-            android:layout_width="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_height="wrap_content"/>
-
-        <CheckBox
-            android:id="@+id/cbSystemUser"
-            android:layout_columnSpan="2"
-            android:text="Usuario del Sistema"
-            android:layout_gravity="center"/>
 
         <Button
+            android:id="@+id/btn_registrar_ficha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnNuevo"
             android:layout_gravity="center"
             android:layout_columnSpan="2"
-            android:text="Crear Persona"/>
+            android:text="@string/registrar_ficha"/>
 
     </GridLayout>
 </LinearLayout>

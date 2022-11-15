@@ -27,7 +27,6 @@ class ReservaTurnosActivity : AppCompatActivity() {
     private lateinit var btnBuscar : Button
     private lateinit var binding:ActivityReservaTurnosBinding
     private lateinit var adapter: ReservasAdapter
-    private lateinit var adapterClient: ListAdapter
     private lateinit var selectedOption : CharSequence
     private var reservas = mutableListOf<Reservas>()
     private var reservasCliente = mutableListOf<Lista>()

@@ -13,4 +13,11 @@
     <string name="fecha_desde">Fecha desde</string>
     <string name="fecha_hasta">Fecha hasta</string>
     <string name="buscar">buscar</string>
+    <string name="registrar_ficha">Registrar Ficha</string>
+    <string name="id_tipo_producto">ID Tipo Producto</string>
+    <string name="id_cliente">ID Cliente</string>
+    <string name="id_empleado">ID Empleado</string>
+    <string name="tratamiento">Tratamiento</string>
+    <string name="diagnostico">Diagnostico</string>
+    <string name="motivo_consulta">Motivo de la consulta</string>
 </resources>
