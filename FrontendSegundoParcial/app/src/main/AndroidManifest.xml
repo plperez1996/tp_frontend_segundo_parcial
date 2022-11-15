@@ -14,7 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="31">
-
+        <activity
+            android:name=".CrearReservaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".FichaClinica.FiltrarFichaClinicaActivity"
             android:exported="false">
@@ -22,7 +28,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".ReservaTurnosActivity"
             android:exported="false">
@@ -30,7 +35,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".FichaClinica.CrearFichaActivity"
             android:exported="false">
@@ -38,7 +42,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".AdministracionPacientes.AdministracionPacientesActivity"
             android:exported="false">
@@ -46,7 +49,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".FichaClinica.FichaClinicaActivity"
             android:exported="false">
@@ -54,7 +56,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".AdministracionPacientes.CrearPersonaActivity"
             android:exported="false">
@@ -69,7 +70,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

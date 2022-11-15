@@ -30,6 +30,10 @@ interface APIService {
     @Headers("Content-Type: application/json", "usuario: usuario5")
     suspend fun postFichaClinica(@Url url: String, @Body body: PostFichaClinica) : Response<Void>
 
+    @POST
+    @Headers("Content-Type: application/json", "usuario: usuario5")
+    suspend fun postReserva(@Url url: String, @Body body: PostReserva) : Response<Void>
+
     @GET
     @Headers("Content-Type: application/json")
     suspend fun getFichaClinica(@Url url: String) : Response<GetFichasClinicaResponse?>?

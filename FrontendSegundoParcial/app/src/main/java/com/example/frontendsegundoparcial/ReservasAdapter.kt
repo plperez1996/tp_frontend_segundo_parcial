@@ -12,10 +12,10 @@ class ReservasAdapter(val reservas: List<Reservas>):RecyclerView.Adapter<Reserva
 
     override fun onBindViewHolder(holder: ReservasViewHolder, position: Int) {
         val item: Reservas = reservas[position]
+        holder.setOnClickListeners()
         holder.bind(item)
     }
 
     override fun getItemCount(): Int = reservas.size
-
 
 }

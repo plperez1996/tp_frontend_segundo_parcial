@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:columnCount="2"
+        android:rowCount="7"
+        tools:context=".AdministracionPacientes.CrearPersonaActivity">
+
+        <EditText
+            android:id="@+id/et_fecha"
+            android:inputType="text"
+            android:hint="Fecha"
+            android:layout_gravity="center"
+            android:layout_columnSpan="2"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            />
+
+
+        <EditText
+            android:id="@+id/et_hora_inicio"
+            android:inputType="text"
+            android:hint="Hora Inicio"
+            android:layout_gravity="center"
+            android:layout_columnSpan="2"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/et_hora_fin"
+            android:inputType="text"
+            android:hint="Hora Fin"
+            android:layout_gravity="fill"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="2"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/et_id_empleado"
+            android:inputType="text"
+            android:hint="@string/id_empleado"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/et_id_cliente"
+            android:inputType="text"
+            android:hint="@string/id_cliente"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no" />
+
+        <Button
+            android:id="@+id/btn_registrar_reserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_columnSpan="2"
+            android:text="Crear Reserva"/>
+
+    </GridLayout>
+</LinearLayout>

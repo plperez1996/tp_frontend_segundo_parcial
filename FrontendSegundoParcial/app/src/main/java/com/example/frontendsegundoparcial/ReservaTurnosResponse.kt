@@ -8,7 +8,10 @@ data class ReservaTurnosResponse(@SerializedName("lista") val lista: List<Reserv
 
 data class Reservas(
     @SerializedName("idReserva") var idReserva: Int? = null,
+    @SerializedName("fechaCadena") var fechaCadena: String? = null,
     @SerializedName("fecha") var fechaReserva: String? = null,
+    @SerializedName("horaInicioCadena") var horaInicioCadena: String? = null,
+    @SerializedName("horaFinCadena") var horaFinCadena: String? = null,
     @SerializedName("flagEstado") var estadoReserva: String? = null,
     @SerializedName("idCliente") var idCliente: idCliente? = null,
     @SerializedName("nombre") var nombreCliente: String? = null,
